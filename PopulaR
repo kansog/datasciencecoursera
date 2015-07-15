@@ -1,0 +1,54 @@
+## Subset
+y <- x[!is.na(x) - This function will exclude all NAs from x. That is what the exclamation mark is used for (exclude).
+x[!is.na(x) & x>0] - This function will exclude all NAs and select only the values greater than zero.
+x[1:10] - Subset just the first ten values
+x[c(-2,-10)] - Subset all items except for items 2 and 10, OR you can put the - sign in front of letter c, like this: x[-c(2,10)]
+
+vect <- c(foo = 11, bar = 2, norf = NA) to create a numeric vector with 3 named elements
+names(vect) will give you the names of vect or
+create an unnamed vector vect2, vect2 <- c(11,2,NA)
+then add the names after the fact: names(vect2) <- c("foo","bar","norf")
+identical(vect,vect2) will let you know if vectors are identical
+vect["BAR"] will give you the second element of vect, likewise, we can specify a vector of names with vect[c("foo","bar")]
+
+## Matrices and Data Frames
+Both represent 'rectangular' data types, meaning that they are used to store tabular data, with rows and columns
+the main difference is that matrices can only contain a single class of data, while data frames can consist of many different classes of data
+
+dim() gives us the 'dimensions' of an Object. Not useful for vectors since it doesnt have a 'dim' attribute (it is null)
+length() works for vectors and you can assign a dim to a vector by: dim(my_vector) <- c(4,5)
+
+A Matrix is simply an atomic vector with a dimension attribute. A more direct method of creating the same matrix uses the matrix() function
+
+cbind() combine columns in a matrix, but be careful with coercion (numbers may be converted to txt)
+data.frame() does a good job on storing character vector names right alongside our matrix of numbers
+example: my_data <- data.frame(patients,my_matrix), where patients is a vector with names and my_matrix a matrix (nbr)
+Behind the scenes, the data.frame() function takes any number of arguments and returns a single object of class 'data.frame' that is composed of the original objects.
+
+colnames() function to set the colnames attribute for our data frame. The use of this function is treacky:
+colnames(my_data) <- cnames, cnames being the vector with the column names.
+
+##Logic
+Two logical values or boolean values, False and True.
+Two AND operators in R: `&` and `&&`
+Two OR operators in R: `|` and `||`
+the second version for both AND and OR only evaluates the first member of an vector
+
+5 > 8 || 6 != 8 && 4 > 3.9
+First, the left and right operands of the AND operator are evaluated.
+6 is not equal to 8, 4 is greater than 3.9.
+therefore both operands are TRUE so the resulting expression `TRUE && TRUE` evaluates to TRUE
+Then, the left operand of the OR operator is evaluated: 5 is not greater than 8 so the entire expression is reduced to false || true
+Since the right operand of this expression is TRUE the entire expression evaluates to TRUE
+
+which() function takes a logical vector as an argument and returns the indices of the vector that are TRUE.
+any()
+all() same idea
+
+##Functions
+mean() average
+Inputs to functions are often called arguments
+
+my_function <- function(x){
+ x
+ }
