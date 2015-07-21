@@ -52,3 +52,13 @@ Inputs to functions are often called arguments
 my_function <- function(x){
  x
  }
+
+Messing and the other Facebook data scientists regularly use open-source R packages from Hadley Wickham, chief scientist at RStudio.
+Wickham’s packages, like ggplot2, dplyr, plyr, and reshape, allow the team to explore new data through custom visualizations.
+
+
+Very Very Nice article and blog: https://solomonmessing.wordpress.com/2012/03/04/visualization-series-insight-from-cleveland-and-tufte-on-plotting-numeric-data-by-groups/
+
+Must do training course: https://www.udacity.com/course/data-analysis-with-r--ud651
+
+http://www.fastcompany.com/3030063/why-the-r-programming-language-is-good-for-business
